@@ -1,20 +1,15 @@
 package portfolioproject.service;
 
-import org.springframework.stereotype.Service;
-import portfolioproject.entity.ProjectEntity;
-import portfolioproject.repository.ProjectRepository;
+import portfolioproject.dto.ProjectDTO;
+
 import java.util.List;
 
-@Service
-public class ProjectService {
+public interface ProjectService {
 
-    private ProjectRepository projectRepository;
+    List<ProjectDTO> findAll();
+    ProjectDTO findById(Long id);
+    ProjectDTO create(ProjectDTO projectDTO);
+    ProjectDTO update(Long id, ProjectDTO projectDTO);
+    boolean delete(Long id);
 
-    public ProjectService(ProjectRepository projectRepository) {
-        this.projectRepository = projectRepository;
-    }
-
-    public List<ProjectEntity> findAll() {
-        return projectRepository.findAll();
-    }
 }
