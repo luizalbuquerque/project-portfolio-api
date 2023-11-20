@@ -26,5 +26,10 @@ public class PersonEntity {
     @Column(name = "employee")
     private Boolean employee;
 
+    public boolean isEmployee() {
+        return employee != null && employee;
+    }
+
+
 }
 

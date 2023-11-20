@@ -1,7 +1,9 @@
 package portfolioproject.entity;
 
 import jakarta.persistence.*;
+import lombok.Data;
 
+@Data
 @Entity
 @Table(name = "members")
 public class MembersEntity {
